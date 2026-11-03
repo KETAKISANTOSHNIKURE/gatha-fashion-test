@@ -1,4 +1,4 @@
-# GATHA FASHION — Test Environment
+# GATHA FASHION — Membership & Inventory
 
 Shop app for memberships, checkout, inventory costing and sales reporting.
 
@@ -33,7 +33,5 @@ Membership and WhatsApp features remain in the browser app. WhatsApp messages ar
 
 ## Hosted environments
 
-The `main` branch is production and the `test` branch is the test version in `gatha-fashion-retail`. GitHub Pages serves static frontend files; the current API is supplied by the corresponding Netlify site and uses its existing Supabase environment. Pages cannot run the API itself. Keep Netlify running until a replacement API host is deployed and verified.
+This repository is the test environment. Its `main` branch deploys to the test GitHub Pages site, and its Netlify site uses the test Supabase project. Production is maintained in the separate `gatha-fashion-retail` repository. GitHub Pages serves static frontend files; the API is supplied by the corresponding Netlify site. Keep Netlify running because Pages cannot run the API itself.
 
-
-This public test repository deploys the test frontend separately from production. Its API uses the GATHA test Netlify site and test Supabase project.
