@@ -1,0 +1,7 @@
+{
+  "name": "gatha-western-wear-shop",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": { "build": "node scripts/build.mjs" }
+}

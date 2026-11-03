@@ -1,0 +1,62 @@
+/* Gatha Fashion shared visual system */
+:root {
+  --ink: #242d28;
+  --muted: #747d76;
+  --green: #29483c;
+  --lime: #d9c8a9;
+  --line: #e6e1d8;
+  --paper: #fffefa;
+  --bg: #f7f5ef;
+  --red: #b94e48;
+  --amber: #a77732;
+  --shadow: 0 8px 28px rgb(43 50 44 / 7%);
+  color-scheme: light;
+}
+
+body { background: var(--bg); color: var(--ink); font-size: 14px; line-height: 1.5; }
+.sidebar { background: #243d34; }
+.brand-mark { background: var(--lime); color: #263e34; }
+.brand-mark:not(.small) { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 27px; }
+.nav-item { min-height: 42px; border-radius: 10px; transition: background .16s ease, color .16s ease; }
+.nav-item:hover { background: rgb(255 255 255 / 9%); color: #fff; }
+.nav-item.active { background: rgb(255 255 255 / 13%); color: #fff; box-shadow: none; font-weight: 700; }
+.nav-item.active span:first-child { color: var(--lime); }
+.main { max-width: 1760px; }
+.topbar { min-height: 90px; }
+.topbar h1 { letter-spacing: -.45px; }
+.eyebrow { color: #77877d; font-size: 10px; letter-spacing: 1.25px; }
+.stat-card, .card { border-color: var(--line); border-radius: 13px; box-shadow: var(--shadow); }
+.stat-card { padding: 19px; }
+.stat-label, .stat-note, .help, .muted { line-height: 1.55; }
+.stat-value { letter-spacing: -.35px; }
+.btn { min-height: 38px; border-radius: 9px; font-size: 12px; }
+.btn.primary { background: var(--green); }
+.btn.primary:hover { background: #345b4b; }
+.btn.lime { background: #eee4d2; color: #3d493e; }
+input, select, textarea { min-height: 40px; border-radius: 8px; }
+input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible, summary:focus-visible {
+  outline: 3px solid rgb(120 153 130 / 36%);
+  outline-offset: 2px;
+}
+table { border-collapse: collapse; }
+th { font-size: 10px; letter-spacing: .45px; }
+td { line-height: 1.5; }
+.badge { border-radius: 999px; }
+.toast { font-size: 12px; }
+.login-screen { background: radial-gradient(ellipse at 70% 15%, #eee5d7 0, transparent 40%), var(--bg); }
+.login-card .brand-mark { background: var(--green); color: #fffefa; }
+.login-card .brand-mark > span { color: var(--lime); }
+.page { padding-top: 28px; }
+.mobile-more summary { border-radius: 9px; }
+
+@media (max-width: 1000px) {
+  .main { padding-right: 22px; padding-left: 22px; }
+  .card { padding: 16px; }
+}
+@media (max-width: 760px) {
+  .main { padding-right: 13px; padding-left: 13px; }
+  .topbar { min-height: 72px; }
+  .page { padding-top: 18px; }
+  .stat-card { padding: 13px; }
+  .btn { min-height: 42px; }
+}
