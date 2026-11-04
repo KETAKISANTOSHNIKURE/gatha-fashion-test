@@ -133,7 +133,7 @@ td { padding: 12px 11px; border-bottom: 1px solid #f1ede6; color: #302d28; font-
   .grid-two { grid-template-columns: minmax(0, 1fr) minmax(260px, .9fr); }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
-  .primary-nav { justify-content: flex-start; gap: 4px; padding-inline: 12px; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; }
+  .primary-nav { justify-content: center; align-content: center; flex-wrap: wrap; gap: 2px 4px; padding: 6px 10px; overflow: visible; }
   .primary-nav .nav-item { min-height: 60px; flex: 0 0 auto; gap: 6px; padding-inline: 8px; font-size: 12px; }
   .primary-nav .nav-icon { width: 18px; height: 18px; }
 }
