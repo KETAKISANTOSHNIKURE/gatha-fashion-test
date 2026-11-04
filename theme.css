@@ -42,7 +42,7 @@ button { cursor: pointer; }
 body.nav-lock { overflow: hidden; }
 
 .primary-nav { position: sticky; top: 0; z-index: 10; min-height: 66px; display: flex; justify-content: center; align-items: stretch; gap: clamp(2px, 1.1vw, 17px); padding: 0 clamp(12px, 4vw, 64px); background: #fff; border-bottom: 1px solid var(--line); box-shadow: 0 3px 14px rgb(37 34 30 / 3%); }
-.nav-item { position: relative; min-height: 66px; padding: 0 15px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 0; border-radius: 0; background: transparent; color: #3d3933; white-space: nowrap; font-size: 13px; font-weight: 500; }
+.nav-item { position: relative; min-height: 66px; flex: 0 0 auto; padding: 0 15px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 0; border-radius: 0; background: transparent; color: #3d3933; white-space: nowrap; font-size: 13px; font-weight: 500; }
 .nav-icon { width: 19px; height: 19px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .nav-item:hover { color: #8e681a; background: #fbf8f1; }
 .nav-item.active { color: #8e681a; background: #f8f1e2; font-weight: 700; }
@@ -132,6 +132,11 @@ td { padding: 12px 11px; border-bottom: 1px solid #f1ede6; color: #302d28; font-
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid-two { grid-template-columns: minmax(0, 1fr) minmax(260px, .9fr); }
 }
+@media (min-width: 768px) and (max-width: 1200px) {
+  .primary-nav { justify-content: flex-start; gap: 4px; padding-inline: 12px; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; }
+  .primary-nav .nav-item { min-height: 60px; flex: 0 0 auto; gap: 6px; padding-inline: 8px; font-size: 12px; }
+  .primary-nav .nav-icon { width: 18px; height: 18px; }
+}
 @media (max-width: 767px) {
   .brand-header { height: 64px; padding-inline: 15px; gap: 13px; position: sticky; top: 0; z-index: 12; }
   .menu-toggle { width: 38px; height: 38px; display: grid; place-items: center; flex: 0 0 auto; border: 1px solid rgb(255 255 255 / 20%); border-radius: 8px; background: transparent; color: #fff; font-size: 19px; }
@@ -141,7 +146,7 @@ td { padding: 12px 11px; border-bottom: 1px solid #f1ede6; color: #302d28; font-
   .header-actions { gap: 10px; }
   .help-icon, .profile-copy, .profile-menu { display: none; }
   .avatar { width: 34px; height: 34px; }
-  .primary-nav { display: flex; position: fixed; z-index: 31; top: 64px; bottom: 0; left: 0; right: auto; width: min(82vw, 320px); max-height: calc(100dvh - 64px); overflow-y: auto; padding: 14px 12px max(18px, env(safe-area-inset-bottom)); flex-direction: column; align-items: stretch; gap: 4px; background: #211e19; border-top: 1px solid rgb(255 255 255 / 9%); box-shadow: 18px 0 35px rgb(0 0 0 / 24%); transform: translateX(-105%); visibility: hidden; pointer-events: none; transition: transform .2s ease, visibility .2s; }
+  .primary-nav { display: flex; position: fixed; z-index: 31; top: 64px; bottom: 0; left: 0; right: auto; width: min(82vw, 320px); max-height: calc(100dvh - 64px); overflow: auto; padding: 14px 12px max(18px, env(safe-area-inset-bottom)); flex-direction: column; align-items: stretch; gap: 4px; background: #211e19; border-top: 1px solid rgb(255 255 255 / 9%); box-shadow: 18px 0 35px rgb(0 0 0 / 24%); transform: translateX(-105%); visibility: hidden; pointer-events: none; transition: transform .2s ease, visibility .2s; }
   #app:not(.nav-open) .primary-nav { transform: translateX(-105%); visibility: hidden; pointer-events: none; }
   #app.nav-open .primary-nav { transform: translateX(0); visibility: visible; pointer-events: auto; }
   .nav-scrim { display: block; position: fixed; z-index: 30; inset: 64px 0 0; background: rgb(17 15 12 / 56%); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .2s ease, visibility .2s; }
