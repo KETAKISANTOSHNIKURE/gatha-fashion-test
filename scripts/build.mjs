@@ -11,4 +11,3 @@ for(const file of files)await fs.copyFile(path.join(root,file),path.join(output,
 const apiBase=process.env.GATHA_API_BASE||'';
 await fs.writeFile(path.join(output,'gatha-config.js'),`window.GATHA_API_BASE=${JSON.stringify(apiBase)};\n`);
 console.log(`Prepared ${files.length} public app files.`);
-

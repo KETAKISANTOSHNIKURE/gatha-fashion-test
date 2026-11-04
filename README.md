@@ -34,4 +34,3 @@ Membership and WhatsApp features remain in the browser app. WhatsApp messages ar
 ## Hosted environments
 
 This repository is the test environment. Its `main` branch deploys to the test GitHub Pages site, and its Netlify site uses the test Supabase project. Production is maintained in the separate `gatha-fashion-retail` repository. GitHub Pages serves static frontend files; the API is supplied by the corresponding Netlify site. Keep Netlify running because Pages cannot run the API itself.
-
