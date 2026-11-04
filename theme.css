@@ -146,12 +146,12 @@ td { padding: 12px 11px; border-bottom: 1px solid #f1ede6; color: #302d28; font-
   .header-actions { gap: 10px; }
   .help-icon, .profile-copy, .profile-menu { display: none; }
   .avatar { width: 34px; height: 34px; }
-  .primary-nav { display: flex; position: fixed; z-index: 31; top: 64px; bottom: 0; left: 0; right: auto; width: min(82vw, 320px); max-height: calc(100dvh - 64px); overflow: auto; padding: 14px 12px max(18px, env(safe-area-inset-bottom)); flex-direction: column; align-items: stretch; gap: 4px; background: #211e19; border-top: 1px solid rgb(255 255 255 / 9%); box-shadow: 18px 0 35px rgb(0 0 0 / 24%); transform: translateX(-105%); visibility: hidden; pointer-events: none; transition: transform .2s ease, visibility .2s; }
+  .primary-nav { display: flex; position: fixed; z-index: 31; top: 64px; bottom: 0; left: 0; right: auto; width: min(82vw, 320px); height: calc(100dvh - 64px); max-height: calc(100dvh - 64px); overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; padding: 14px 12px max(18px, env(safe-area-inset-bottom)); flex: 0 0 auto; flex-direction: column; align-items: stretch; gap: 4px; background: #211e19; border-top: 1px solid rgb(255 255 255 / 9%); box-shadow: 18px 0 35px rgb(0 0 0 / 24%); transform: translateX(-105%); visibility: hidden; pointer-events: none; transition: transform .2s ease, visibility .2s; }
   #app:not(.nav-open) .primary-nav { transform: translateX(-105%); visibility: hidden; pointer-events: none; }
   #app.nav-open .primary-nav { transform: translateX(0); visibility: visible; pointer-events: auto; }
   .nav-scrim { display: block; position: fixed; z-index: 30; inset: 64px 0 0; background: rgb(17 15 12 / 56%); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .2s ease, visibility .2s; }
   #app.nav-open .nav-scrim { opacity: 1; visibility: visible; pointer-events: auto; }
-  .primary-nav .nav-item { min-height: 48px; justify-content: flex-start; gap: 14px; padding: 0 14px; border-radius: 8px; color: #f1ece3; font-size: 14px; }
+  .primary-nav .nav-item { display: flex; flex: 0 0 auto; width: 100%; min-height: 48px; justify-content: flex-start; gap: 14px; padding: 0 14px; border-radius: 8px; color: #f1ece3; font-size: 14px; }
   .primary-nav .nav-item.active { color: #f1d99e; background: rgb(198 154 58 / 16%); }
   .primary-nav .nav-item.active::after { width: 3px; height: auto; top: 7px; bottom: 7px; right: auto; border-radius: 2px; }
   .primary-nav .nav-item.active .nav-icon { color: #e2bc65; }
